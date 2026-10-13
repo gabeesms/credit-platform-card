@@ -1,0 +1,40 @@
+# Build and test output
+**/bin/
+**/obj/
+artifacts/
+publish/
+TestResults/
+*.coverage
+*.coveragexml
+coverage*.json
+coverage*.xml
+coverage*.info
+
+# IDE and user-specific files
+.vs/
+.vscode/
+*.user
+*.userosscache
+*.sln.docstates
+*.suo
+
+# Local environment and credentials
+.env
+.env.*
+!.env.example
+secrets.json
+secrets.*.json
+appsettings.Local.json
+appsettings.*.Local.json
+*.pfx
+*.p12
+*.key
+*.pem
+
+# Local database files
+*.mdf
+*.ldf
+*.ndf
+*.db
+*.sqlite
+*.sqlite3

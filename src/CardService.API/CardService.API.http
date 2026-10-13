@@ -1,0 +1,35 @@
+@baseUrl = http://localhost:5234
+@customerId = 76815a11-97ae-4009-aca1-d8c0cd1b47db
+@cardId = 00000000-0000-0000-0000-000000000000
+
+### List cards for a customer
+GET {{baseUrl}}/api/customers/{{customerId}}/cards
+Accept: application/json
+
+### Get a card by its identifier
+GET {{baseUrl}}/api/cards/{{cardId}}
+Accept: application/json
+
+### Block a card
+PUT {{baseUrl}}/api/cards/{{cardId}}/status
+Content-Type: application/json
+
+{
+  "status": "Blocked"
+}
+
+### Reactivate a blocked card
+PUT {{baseUrl}}/api/cards/{{cardId}}/status
+Content-Type: application/json
+
+{
+  "status": "Active"
+}
+
+### Cancel a card
+PUT {{baseUrl}}/api/cards/{{cardId}}/status
+Content-Type: application/json
+
+{
+  "status": "Cancelled"
+}
